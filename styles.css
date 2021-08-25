@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+  font-size: 20px;
+  font-family: Roboto;
+  margin: 0;
+  color: #1b1b1b;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+/* Header Area */
+
+.intro { 
+  grid-area: 1 / 4 / 2 / 13;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  padding: 20px;
+}
+
+/* banner text */
+[role="banner"] {
+  grid-area: 1 / 1 / 2 / 7; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+[role="banner"] > * {
+  margin: 10px;
+}
+
+.intro > div {
+  border-top: 20px solid rgb(77, 154, 255);
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0px 3px 5px gray;
+}
+
+.preamble { 
+   grid-area: 2 / 1 / 9 / 4;
+}
+
+.summary { 
+  grid-area: 2 / 4 / 9 / 7;
+}
+
+.summary::after{
+    content: url('./chart-1.png');
+}
+
+/* Main Content Area */
+
+.main { 
+  grid-area: 2 / 4 / 6 / 13;
+  background-color: #eb8989; 
+}
+
+/* SideBear */
+
+aside { 
+  grid-area: 1 / 1 / 6 / 4; 
+  background-color: aqua;
+}
+
