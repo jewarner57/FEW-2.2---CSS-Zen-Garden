@@ -10,7 +10,7 @@ body {
 .page-wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: minmax(min-content, max-content);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 }
@@ -22,7 +22,7 @@ body {
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: minmax(min-content, max-content);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
 
@@ -36,6 +36,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  font-size: 50px;
 }
 
 [role="banner"] > * {
@@ -61,17 +63,105 @@ body {
     content: url('./chart-1.png');
 }
 
-/* Main Content Area */
-
-.main { 
-  grid-area: 2 / 4 / 6 / 13;
-  background-color: #eb8989; 
-}
-
 /* SideBear */
 
 aside { 
   grid-area: 1 / 1 / 6 / 4; 
-  background-color: aqua;
+  background-color: gray;
+  padding: 10px;
 }
 
+aside > * {
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Main Supporting Section */
+.explanation { 
+  background-color: tomato;
+}
+.participation { 
+  background-color: rgb(71, 129, 255);
+}
+.benefits { 
+  background-color: rgb(224, 184, 99);
+}
+.requirements { 
+  background-color: rgb(57, 199, 57);
+}
+
+.main { 
+  grid-area: 2 / 4 / 6 / 13;
+  background-color: #ececec; 
+}
+
+.main > div  {
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+  margin: 10px;
+}
+
+.main > div :hover {
+  width: auto;
+  z-index: 10000;
+}
+
+.main > div > p {
+  font-size: 0;
+  opacity: 0;
+  height: 0px;
+
+  animation: hideContent 0.3s linear;
+}
+
+.main > div:hover > p { 
+  font-size: 20px;
+  opacity: 1;
+  height: auto;
+  z-index: 10000;
+  animation: showContent 0.3s linear;
+}
+
+@keyframes showContent {
+  0%{
+    font-size: 0;
+    opacity: 0;
+    height: 0px;
+  }
+  100%{
+    font-size: 20px;
+    height: auto;
+    width: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes hideContent {
+  0%{
+    font-size: 20px;
+    height: auto;
+    width: auto;
+    opacity: 1;
+  }
+  100%{
+    font-size: 0;
+    opacity: 0;
+    height: 0px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 0;
+  text-align: center;
+}
+
+footer > * {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
