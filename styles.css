@@ -17,6 +17,7 @@ body {
   grid-row-gap: 0px;
 }
 
+
 abbr {
     text-decoration: none;
     border-bottom: 2px solid orange;
@@ -43,8 +44,6 @@ h3, h2, h1 {
 [role="banner"] {
   grid-area: 1 / 1 / 2 / 7; 
   text-align: center;
-  display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 
   font-size: 50px;
@@ -256,6 +255,7 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 60px;
 }
 
 footer > * {
@@ -267,9 +267,10 @@ footer > * {
 footer > a {
   display: block;
   width: 100px;
-  padding: 20px;
+  padding: 20px 40px;
   background-color: gray;
   transition: all 0.5s 0s ease;
+  margin: 0;
 }
 
 .zen-validate-html:hover {
@@ -293,3 +294,21 @@ footer > a {
 .zen-github:hover {
   background-color: #6698ff;
 }
+
+/* Remove Grid For Small Screens */
+@media only screen and (max-width: 1200px){
+  .page-wrapper {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  .intro {
+    display: block;
+    grid-template-columns: none;
+    grid-template-rows: none;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+}
+
