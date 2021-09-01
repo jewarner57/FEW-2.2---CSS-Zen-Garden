@@ -69,6 +69,10 @@ h3, h2, h1 {
   grid-area: 2 / 4 / 9 / 7;
 }
 
+a {
+  color: black;
+}
+
 .summary::after{
     content: url('./chart-1.png');
 }
@@ -101,6 +105,39 @@ aside > * {
   text-align: center;
 }
 
+/* Next and Resources */
+.next, .viewall {
+  padding: 0;
+}
+
+.next > a, .viewall > a, .zen-resources > ul > li > a {
+  display: block;
+  height: 100%;
+  padding: 20px;
+}
+
+.next > a:hover, .viewall > a:hover, .zen-resources > ul > li > a:hover  {
+  background-color: rgb(197, 197, 197);
+  text-decoration: none;
+}
+
+
+/* Designs Section */
+.design-selection > nav > ul > li {
+  padding: 20px;
+}
+
+.design-selection > nav > ul > li > .design-name {
+  border-bottom: 2px solid red;
+}
+
+.design-selection > nav > ul > li > .design-name:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #98ff66;
+}
+
+
+/* Other Sidebar */
 ul {
   list-style: none;
   padding: 0;
@@ -109,8 +146,12 @@ ul {
 
 li {
   margin: 0;
-  padding: 20px;
   background-color: #ececec;
+  color: black;
+}
+
+li > a {
+  text-decoration: none;
   color: black;
 }
 
@@ -124,6 +165,10 @@ li:hover {
   color: black;
 }
 
+.design-name:hover, .designer-name:hover, li > a:hover  {
+  text-decoration: underline;
+}
+
 .designer-name {
   font-family: Roboto;
   color: rgb(73, 73, 73);
@@ -132,16 +177,16 @@ li:hover {
 
 /* Main Supporting Section */
 .explanation { 
-  background-color: tomato;
+  background-color: #ff6698;
 }
 .participation { 
-  background-color: rgb(71, 129, 255);
+  background-color: #ffb366;
 }
 .benefits { 
-  background-color: rgb(224, 184, 99);
+  background-color: #ffff66;
 }
 .requirements { 
-  background-color: rgb(57, 199, 57);
+  background-color: #98ff66;
 }
 
 .main { 
@@ -152,8 +197,8 @@ li:hover {
 .main > div  {
   padding: 20px;
   border-radius: 20px;
-  color: white;
-  margin: 10px;
+  color: black;
+  margin: 20px 90px;
 }
 
 .main > div :hover {
@@ -162,11 +207,11 @@ li:hover {
 }
 
 .main > div > p {
+  transition: opacity 0.5s 0.5s ease;
+  transition: font-size 0.2s ease;
   font-size: 0;
   opacity: 0;
   height: 0px;
-
-  animation: hideContent 0.3s linear;
 }
 
 .main > div:hover > p { 
@@ -174,10 +219,9 @@ li:hover {
   opacity: 1;
   height: auto;
   z-index: 10000;
-  animation: showContent 0.3s linear;
 }
 
-@keyframes showContent {
+/* @keyframes showContent {
   0%{
     font-size: 0;
     opacity: 0;
@@ -203,18 +247,49 @@ li:hover {
     opacity: 0;
     height: 0px;
   }
-}
+} */
 
 /* Footer */
 footer {
   background-color: gray;
-  padding: 20px;
   border-radius: 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 footer > * {
   color: white;
   text-decoration: none;
   margin: 0 20px;
+}
+
+footer > a {
+  display: block;
+  width: 100px;
+  padding: 20px;
+  background-color: gray;
+  transition: all 0.5s 0s ease;
+}
+
+.zen-validate-html:hover {
+  background-color: #ff6698;
+}
+
+.zen-validate-css:hover {
+  background-color: #ffb366;
+}
+
+.zen-license:hover {
+  background-color: #ffff66;
+  color: black;
+}
+
+.zen-accessibility:hover {
+  background-color: #98ff66;
+  color: black;
+}
+
+.zen-github:hover {
+  background-color: #6698ff;
 }
