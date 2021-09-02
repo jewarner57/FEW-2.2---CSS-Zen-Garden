@@ -176,16 +176,39 @@ li:hover {
 
 /* Main Supporting Section */
 .explanation { 
-  background-color: #ff6698;
+  background: #ff6699;
 }
+
+.explanation:hover {
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 67%, rgba(255,102,153,1) 86%);
+}
+
 .participation { 
   background-color: #ffb366;
 }
+
+.participation:hover {
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 67%, rgba(255,179,102,1) 86%);
+}
+
 .benefits { 
   background-color: #ffff66;
 }
+
+.benefits:hover {
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 67%, rgba(255,255,102,1) 86%);
+}
+
 .requirements { 
   background-color: #98ff66;
+}
+
+.requirements:hover {
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg, rgba(255,255,255,1) 74%, rgba(152,255,102,1) 90%);
 }
 
 .main { 
@@ -200,7 +223,7 @@ li:hover {
   margin: 20px 90px;
 }
 
-.main > div :hover {
+.main > div:hover {
   width: auto;
   z-index: 10000;
 }
@@ -218,35 +241,8 @@ li:hover {
   opacity: 1;
   height: auto;
   z-index: 10000;
+  padding: 10px;
 }
-
-/* @keyframes showContent {
-  0%{
-    font-size: 0;
-    opacity: 0;
-    height: 0px;
-  }
-  100%{
-    font-size: 20px;
-    height: auto;
-    width: auto;
-    opacity: 1;
-  }
-}
-
-@keyframes hideContent {
-  0%{
-    font-size: 20px;
-    height: auto;
-    width: auto;
-    opacity: 1;
-  }
-  100%{
-    font-size: 0;
-    opacity: 0;
-    height: 0px;
-  }
-} */
 
 /* Footer */
 footer {
